@@ -67,7 +67,7 @@ if (yr) yr.textContent = new Date().getFullYear();
     '<p class="eyebrow">Student special</p>' +
     '<h2 id="promo-title">10% off for JAC students</h2>' +
     '<p>Show your John Abbott College student card at the counter and get 10% off any burger, sandwich or flatbread. A free maple brownie on Fridays.</p>' +
-    '<div class="actions"><a class="btn" href="menu.html">See the menu</a>' +
+    '<div class="actions"><a class="btn" href="' + (document.querySelector('.nav a[href$="Menu/"]') || {getAttribute:()=>'Menu/'}).getAttribute('href') + '">See the menu</a>' +
     '<button class="btn ghost" type="button" data-close>Maybe later</button></div>';
   document.body.appendChild(dlg);
 
