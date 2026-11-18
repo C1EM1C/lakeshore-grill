@@ -102,8 +102,7 @@ if (yr) yr.textContent = new Date().getFullYear();
   const btn = document.querySelector(".theme-toggle");
   if (!btn) return;
   const root = document.documentElement;
-  const mq = window.matchMedia("(prefers-color-scheme: dark)");
-  const current = () => root.getAttribute("data-theme") || (mq.matches ? "dark" : "light");
+  const current = () => root.getAttribute("data-theme") === "dark" ? "dark" : "light";
   const paint = () => {
     const dark = current() === "dark";
     btn.dataset.mode = dark ? "dark" : "light";
@@ -115,6 +114,5 @@ if (yr) yr.textContent = new Date().getFullYear();
     try { localStorage.setItem("theme", next); } catch (e) {}
     paint();
   });
-  mq.addEventListener && mq.addEventListener("change", paint);
   paint();
 })();
