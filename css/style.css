@@ -197,3 +197,19 @@ textarea { min-height: 120px; resize: vertical; }
 .promo-x:hover { background: var(--line); }
 @keyframes promo-in { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .promo[open] { animation: none; } }
+
+/* Clickable dish cards and dish pages */
+.dish { position: relative; }
+.dish h3 a { color: inherit; text-decoration: none; }
+.dish h3 a::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+.dish h3 a:hover, .dish:hover h3 a { color: var(--forest); }
+.dish:hover img { filter: brightness(.98); }
+.dish:focus-within { border-color: var(--forest); box-shadow: 0 0 0 3px var(--sage); }
+.dish h3 a:focus-visible { outline: none; }
+.back { margin: 0; font-weight: 700; }
+.back a { text-decoration: none; }
+.back a:hover { text-decoration: underline; }
+.price.big { font-size: 1.6rem; margin: 0 0 .6em; }
+.small-h { font-size: 1.1rem; margin: 1.2em 0 .4em; }
+.ings { margin: 0 0 1.2em; padding-left: 1.2em; color: var(--muted); }
+.ings li { margin: .2em 0; }
