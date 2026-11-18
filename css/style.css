@@ -32,15 +32,6 @@
   --gutter: clamp(16px, 4vw, 40px);
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --forest: #8EBA82; --sage: #8EBA82; --paper: #101A13; --soft: #1D2E22; --ink: #E8EFE2; --card: #17241B;
-    --muted: #A9BBAA; --line: #2B4131; --neutral: #202E25; --btn: #8EBA82; --on-btn: #14231A;
-    --nav-bg: #1D3D2A; --on-nav: #F2F6EC; --nav-hover: rgba(255, 255, 255, .12); --nav-cur-bg: #E6EBDD; --nav-cur-fg: #26372B;
-    --foot-bg: #0B130E; --on-foot: #E8EFE2; --foot-muted: #A9BBAA; --focus: #8EBA82; --open: #6CC48A; --closed: #C9A26B;
-    color-scheme: dark;
-  }
-}
 :root[data-theme="dark"] {
   --forest: #8EBA82; --sage: #8EBA82; --paper: #101A13; --soft: #1D2E22; --ink: #E8EFE2; --card: #17241B;
   --muted: #A9BBAA; --line: #2B4131; --neutral: #202E25; --btn: #8EBA82; --on-btn: #14231A;
@@ -86,7 +77,6 @@ p { margin: 0 0 1em; max-width: 65ch; }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 10px 22px; border-radius: 999px; border: 2px solid transparent; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; background: var(--btn); color: var(--on-btn); transition: transform .15s ease, background-color .15s ease; }
 .btn:hover { transform: translateY(-2px); background: #245737; }
 :root[data-theme="dark"] .btn:hover { background: #A6CC9B; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn:hover { background: #A6CC9B; } }
 .btn.ghost { background: transparent; color: var(--forest); border-color: var(--forest); }
 .btn.ghost:hover { background: var(--soft); }
 .btn.small { min-height: 40px; padding: 6px 16px; }
@@ -142,7 +132,6 @@ p { margin: 0 0 1em; max-width: 65ch; }
 .band .btn { background: var(--paper); color: #26372B; }
 .band .btn:hover { background: var(--soft); }
 :root[data-theme="dark"] .band, .band { --band: 1; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .band { background: #1D3D2A; } }
 :root[data-theme="dark"] .band { background: #1D3D2A; }
 .page-head { padding-block: clamp(32px, 6vw, 64px) 8px; }
 .page-head p { color: var(--muted); font-size: 1.15rem; }
